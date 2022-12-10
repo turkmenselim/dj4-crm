@@ -1,0 +1,36 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<br>
+<div class="row text-center">
+	<div class="col md-6">
+		<div class="card card-body">
+			
+			<form action="" method="POST">
+				{% csrf_token %}
+				
+                <h3>Create Customer</h3>
+                <hr>
+                <h4>Username: </h4>
+                {{form.username}}
+                <h4>Email: </h4>
+                {{form.email}}
+                <h4>Password: </h4>
+                {{form.password1}}
+                <h4>Password Again: </h4>
+                {{form.password2}}
+                <br>
+				<input class="mt-3 btn btn-md btn-primary" type="submit" name="Submit" value="Submit">
+				
+			</form>
+
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
